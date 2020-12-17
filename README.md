@@ -4,6 +4,11 @@
 #### Visit Our Website Here:  
 http://ec2-3-137-176-157.us-east-2.compute.amazonaws.com:3000/
 
+# Direction (in case you want the web locally)
+- Clone the github respo.
+- Do "npm i" to install node modules.
+- The app is served in port 3000 (change server.js to change the port you want the app to be served).
+
 # Languages/Frameworks used 
 - JavaScript as frontend tools
 - EJS to generate HTML on client-side
