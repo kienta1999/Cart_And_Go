@@ -1,0 +1,242 @@
+/* Navigation Bar */
+.navfont{
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    background-color: #222222;
+}
+
+.navbar{
+    margin-bottom: 0%;
+}
+
+.nav-link{
+    color: whitesmoke;
+}
+
+.nav-link:hover{
+    color: grey;
+}
+
+/* Log In Page */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+  
+.bg_image{
+    background-image: url(main_background.jpeg);
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Log In & Register Box */
+.main {
+    width: 320px;
+    background: #000;
+    opacity: 0.5;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 20px 30px;
+    text-decoration: none;
+}
+
+#login_header, #register_header{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.main p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.main input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.main input[type="text"], input[type="email"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 50px;
+    color: white;
+    font-size: 16px;
+}
+
+.firebase_btn{
+    border: none;
+    outline: none;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.firebase_btn:hover{
+    cursor: pointer;
+    background-color:grey;
+    color: white;
+}
+
+#tab_btn{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.main a {
+    text-decoration: none;
+}
+
+.login_tab, .register_tab {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    background-color: #37474f;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+}
+
+#register_box {
+    display: none;
+}
+
+.active {
+    background-color: #eee;
+    color: #000;
+}
+
+/* Menu Images */
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
+}
+
+img {
+    height: 167px;
+    width: 255px;
+}
+
+.image {
+    border-radius: 0.35em;
+    border: 0;
+    display:block;
+    position: relative;
+}
+
+
+.image:before {
+  	background: url("overlay.png");
+  	border-radius: 0.35em;
+  	content: '';
+  	display: block;
+  	height: 100%;
+  	left: 0;
+  	opacity: 0.5;
+  	position: absolute;
+  	top: 0;
+  	width: 100%;
+}
+
+.image.thumb:after {
+    border-radius: 0.35em;
+    border: solid 3px rgba(255, 255, 255, 0.5);
+    color: #fff;
+    content: 'Add To Cart';
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 400;
+    left: 42%;
+    line-height: 2.25em;
+    margin: -1.5em 0 0 -3em;
+    opacity: 0;
+    padding: 0 1.5em;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: 50%;
+    white-space: nowrap;
+}
+
+.image.thumb:hover:after {
+    opacity: 1.0;
+}
+
+.image.thumb:hover:before {
+    opacity: 1.0;
+    background: url('overlay.png');
+}
+
+/* Quantity Button */
+.plus-minus-input .input-group-button .circle {
+    border-radius: 50%;
+}
+.plus-minus-input .input-group-field {
+    text-align: center;
+    width: 50px;
+}
+
+.plus-minus-input .input-group-field::-webkit-inner-spin-button,
+.plus-minus-input .input-group-field ::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.checkout_display{
+    float: right;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+	display: none;
+	position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 410px;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.form-popup .close-new-event-btn{
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+/* Drinks List */
+ul.no_bullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Search Bar */
+.search_container {
+    float:right;
+}
+
+.search-container button {
+    float:right;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <%- include("partials/header") -%>
+      <h1>Your Cart <i class="fa fa-shopping-cart"></i></h1>
+    <form action="/order" method="POST">
+      
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Item Names</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% cart.forEach(element => { %>
+            <tr>
+              <th scope="row">
+                <div class="row">
+                  <div class="col-sm"><img src="<%= element.href %>" alt=""></div>
+                  <div class="col-sm"><p><%= element.name %></p></div>
+                </div>
+              </th>
+              <td><%= element.quantity %></td>
+              <td><%= element.price %></td>
+              <td>
+                <%= element.price * element.quantity%>
+                <br><br><br><br><br>
+                <button type="button" class="btn btn-outline-danger btn-sm remove-btn" id = "remove-<%= element.id %>">Remove</button>
+              </td>
+              
+              <input type="hidden" name="<%= "name-" + element.id %>" value="<%= element.name %>">
+              <input type="hidden" name="<%= "id-" + element.id %>" value="<%= element.id %>">
+              <input type="hidden" name="<%= "quantity-" + element.id %>" value="<%= element.quantity %>">
+              <input type="hidden" name="<%= "price-" + element.id %>" value="<%= element.price %>">
+              <input type="hidden" name="<%= "href-" + element.id %>" value="<%= element.href %>">
+
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <h4 class="checkout_display">Total: $<%= total.toFixed(2) %></h4>
+      <br>
+      <br>
+      <a href="#" id="checkout_btn" class="checkout_display btn btn-secondary btn-lg">Checkout</a>
+      <% if (Math.round(total * 100) / 100 > 0) { %>
+      <div class="form-popup" id="myForm">
+        <h2>Checkout?</h2>
+        <br>
+        <button type="button" class="close-new-event-btn cancel" aria-label="Close" id="close-form">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <p>Thank you for your order, <%= name %> </p>
+          <p>The total cost was $<%= total.toFixed(2) %></p>
+          <p>We will finish your order in <%= Math.round(total / 3.3) %> minutes</p>
+          <button type="submit" class="checkout_display btn-outline-secondary btn-sm" id="submit-form">Pay</button>
+        
+      </div>
+      <% } %>
+
+      </form>
+  <footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "cart.js"></script>
+  </footer>
+  <%- include("partials/footerBody") -%>
+</html>

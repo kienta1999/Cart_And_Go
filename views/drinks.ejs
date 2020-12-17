@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include("partials/header") -%>
+
+<section id="drink_section">
+  <div class="row">
+    <div class="col"><h1>Drink Menu <i class="fa fa-glass"></i></h1></div>
+    <div class="search_container">
+      <input type="text" placeholder="Search.." id="search_value">
+      <button id="search_button"><i class="fa fa-search"></i></button>
+    </div>
+  </div>
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Names</th>
+          <th scope="col">Ingredients</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody id="drink_menu"></tbody>
+  </table>
+</section>
+<footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src = "drinks.js"></script>
+</footer>
+<%- include("partials/footerBody") -%>
+</html>

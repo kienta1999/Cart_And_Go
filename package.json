@@ -1,0 +1,29 @@
+{
+  "name": "creativeproject-module7_488493_488494",
+  "version": "1.0.0",
+  "description": "488493",
+  "main": "server.js",
+  "scripts": {
+    "start": "npx nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://anhvqle@github.com/cse330-fall-2020/creativeproject-module7_488493_488494.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cse330-fall-2020/creativeproject-module7_488493_488494/issues"
+  },
+  "homepage": "https://github.com/cse330-fall-2020/creativeproject-module7_488493_488494#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.1",
+    "nodemon": "^2.0.6",
+    "yelp-fusion": "^3.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <%- include("partials/header") -%>
+ 
+ <% order.forEach(element => { %>
+    <a href="order/<%=element.id%>"><h5>OrderID: <%= element.id %> </h5></a>
+    <p>Date Purchased: <%= format(element.date.getDate()) + '-' + format(element.date.getMonth()) + '-' + element.date.getFullYear() %> </p>
+    <p>Time: <%= format(element.date.getHours()) + ':' + format(element.date.getMinutes()) + ':' + format(element.date.getSeconds()) %> </p>
+ <% }) %>
+<footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</footer>
+<%- include("partials/footerBody") -%>
+</html>
+
+
+<%
+function format(num) {
+    return num < 10 ? '0' + num : num;
+}
+%>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/header") -%>
+    <br>
+    <section id="drink_section">
+        <div class="row">
+          <div class="col"><h1>Nearby Restaurants <i class="fa fa-search"></i></h1></div>
+            <form action="/nearby" method="post">
+                <input type="text" name="location" id = 'location' placeholder="location" required>
+                <!-- <input type="hidden" name="pagenum" id = 'pagenum' value = "1"> -->
+                <button type="submit" class="btn btn-outline-dark btn-sm">Search</button>
+            </form>
+        </div>
+      </section>
+
+      <br>
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">Images</th>
+                <th scope="col">Address</th>
+                <th scope="col">Price</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Phone</th>
+                </tr>
+            </thead>
+        
+            <tbody id="drink_menu">
+            <% if (result != null) { 
+                result.forEach(element => {
+            %>
+            <tr>
+                <td>
+                    <a href="<%= element.url %>">
+                        <h6><%= element.name %></h6>
+                        <img src="<%= element.image_url %>" alt="img">
+                    </a>
+                </td>
+            
+                <td>
+                    <%= element.location.address1 + ", " + element.location.city + ", " + element.location.state + ", " + element.location.country + " " + element.location.zip_code %>
+                    <div><% element.location.display_address %></div>
+                </td>
+                <td><%= element.price %></td>
+                <td><%= element.rating %></td>
+                <td><%= element.display_phone %></td>
+            </tr>
+            <%
+                });
+            }
+            %>
+            </tbody>
+        </table>
+    <footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </footer>
+    <%- include("partials/footerBody") -%>
+</html>

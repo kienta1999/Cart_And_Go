@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <%- include("partials/header") -%>
+      <section>
+        <h2 class="topic">Vietnamese Food </h2>
+        <form action="/cart" method="post" id = "cart">
+          <div class="row">
+            <% menu.forEach(element => { %>
+              <div class="col-lg-3 col-md-6 col-sm-6 thumbnail">
+                <a id = "<%= "img-" + element.id%>" href="#" class="image thumb"><img src="<%= element.href %>" class="round" alt="food_image"></a>
+                <h3><%= element.name %></h3>
+                <div class="row">
+                  <div class="col-sm"><p class="text description">$<%= element.price %></p></div>
+                  <div class="col-sm">
+                    <p class="checkout_display">Quantity: <span id="<%= "food-quantity-" + element.id%>">0</span></p>
+                    <input type="hidden" id="<%= "val-" + element.id%>" name="<%=element.id%>" value="0">
+                  </div>
+                </div> 
+              </div>
+            <% }) %>
+          </div>
+        </form>
+        <br>
+        <a href="#" class="btn btn-outline-secondary button" onclick="$('#cart').submit()">View Cart & Checkout</a>
+      </section>    
+  <footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "main.js"></script>
+  </footer>
+  <%- include("partials/footerBody") -%>
+</html>

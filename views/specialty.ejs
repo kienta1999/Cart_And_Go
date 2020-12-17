@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include("partials/header") -%>
+
+<section id="food_section">
+    <div class="row">
+      <div class="col"><h1>Food You Should Try in Your Area <i class="fa fa-spoon"></i></h1></div>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+          </tr>
+        </thead>
+        <tbody id="food_menu"></tbody>
+    </table>
+  </section>
+  
+<footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src = "specialty.js"></script>
+</footer>
+<%- include("partials/footerBody") -%>
+</html>
